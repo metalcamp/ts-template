@@ -5,6 +5,7 @@ import {createConnection} from "typeorm";
 import * as dotenv from "dotenv";
 import {errorHandler} from "./middlewares/ErrorHandler";
 import "reflect-metadata";
+import logger from "./logger";
 
 dotenv.config();
 
@@ -26,7 +27,7 @@ export class App {
 
     public listen() {
         this.app.listen(this.port, () => {
-            console.log("info", `app listening on the port ${this.port} in ${this.env} mode`);
+            logger.log("info", `app listening on the port ${this.port} in ${this.env} mode`);
         });
     }
 
