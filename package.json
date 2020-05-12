@@ -18,5 +18,10 @@
         "eslint-plugin-node": "^11.1.0",
         "jest": "^26.0.1",
         "typescript": "^3.8.3"
+    },
+    "dependencies": {
+        "@types/express": "^4.17.6",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1"
     }
 }
