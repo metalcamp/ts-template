@@ -5,6 +5,7 @@ Includes:
 * Jest
 * ESLint (with some plugins preconfigured)
 * Express
+* Typeorm
 * Winston logger
 
 ## Steps to run this project
