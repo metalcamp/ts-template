@@ -7,3 +7,4 @@ node_modules/
 temp/
 tmp/
 yarn-error.log
+.env
