@@ -1,14 +1,12 @@
-import {getConnection} from "typeorm";
+import {EntityRepository, Repository} from "typeorm";
 import {User} from "../entity/User";
 
-class UserRepository {
-    public getAll(): Promise<User[]> {
-        return getConnection()
-            .getRepository(User)
-            .createQueryBuilder('user')
+@EntityRepository(User)
+export class UserRepository extends Repository<User>{
+    getAll(): Promise<User[]> {
+        return this.manager
+            .createQueryBuilder()
             .orderBy({user: 'ASC'})
             .getMany();
     }
 }
-
-export const userRepository = new UserRepository();
