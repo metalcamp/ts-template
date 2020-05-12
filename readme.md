@@ -8,8 +8,10 @@ Includes:
 ## Steps to run this project
 
 1. Run `yarn` command
-2. Setup database settings inside `ormconfig.json` file
-3. Run `yarn start` command
+2. Setup database settings inside `ormconfig.json` and `docker-compose.yml` file
+3. Copy .env.example to .env `cp .env.example .env`
+3. Run `docker-compose up -d`
+4. Run `yarn start` command
 
 ## Tests
 
