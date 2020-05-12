@@ -5,7 +5,9 @@
     "license": "MIT",
     "private": false,
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "jest",
+        "unit": "jest --config jest.unit.config.js",
+        "integration": "jest --config jest.integration.config.js --detectOpenHandles"
     },
     "devDependencies": {
         "@types/jest": "^25.2.1",
@@ -17,6 +19,7 @@
         "eslint-plugin-jest": "^23.10.0",
         "eslint-plugin-node": "^11.1.0",
         "jest": "^26.0.1",
+        "ts-jest": "^25.5.1",
         "typescript": "^3.8.3"
     },
     "dependencies": {
