@@ -1,5 +1,9 @@
-/.idea
-/node_modules
-/dist
-/coverage
+.idea/
+.vscode/
+build/
+coverage/
+dist/
+node_modules/
+temp/
+tmp/
 yarn-error.log
