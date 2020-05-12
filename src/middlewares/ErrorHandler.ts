@@ -1,5 +1,6 @@
 import express = require('express');
 import {HandledError} from '../interfaces/HandledError';
+import logger from "../logger";
 
 export function errorHandler(): (err: HandledError, req: express.Request, res: express.Response, next: express.NextFunction) => void {
     return (err, _req, res, _next) => {
@@ -11,7 +12,7 @@ export function errorHandler(): (err: HandledError, req: express.Request, res: e
             code: status,
         };
 
-        console.log('error', JSON.stringify(response));
+        logger.log('error', JSON.stringify(response));
 
         res.status(status);
         res.json(response);
